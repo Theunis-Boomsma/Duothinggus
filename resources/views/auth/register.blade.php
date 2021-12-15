@@ -64,31 +64,41 @@ span.psw {
 
 <h2 style="color:rgb(255, 255, 255)" >Register Form</h2>
 
-<form action="/action_page.php" method="post">
+<form action="{{ route('register') }}" method="post">
+  @csrf
   <div class="imgcontainer">
     <img src="Duothinggus_2.png" alt="Avatar" >
   </div>
 
   <div class="container">
 
-    <label for="username"><b style="color:rgb(255, 255, 255)">Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    <label for="name"><b style="color:rgb(255, 255, 255)">Username</b></label>
+    <input type="text" placeholder="Enter Username" name="name" value="{{ old('name') }}">
+    @error('name')
+      <p style="color: red">{{ $message }}</p>
+    @enderror
 
     <label for="email"><b style="color:rgb(255, 255, 255)">Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <input type="text" placeholder="Enter Email" name="email" value="{{ old('email') }}">
+    @error('email')
+      <p style="color: red">{{ $message }}</p>
+    @enderror
     
     <label for="password"><b style="color:rgb(255, 255, 255)">Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    <input type="password" placeholder="Enter Password" name="password">
+    @error('password')
+      <p style="color: red">{{ $message }}</p>
+    @enderror
 
     <label for="password_confirmation"><b style="color:rgb(255, 255, 255)">Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="password_confirmation" id="password_confirmation" required>
+    <input type="password" placeholder="Repeat Password" name="password_confirmation">
 
     
         
     <button type="submit" style="color:rgb(255, 255, 255)">Register</button>
     <label style="color:rgb(255, 255, 255)">
     
-      <input type="checkbox" checked="checked" name="remember" >By creating an account you agree to our <a  href="#">Terms & Privacy</a>.</p>
+      <input type="checkbox" checked="checked">By creating an account you agree to our <a  href="#">Terms of service</a>.</p>
     </label>
   </div>
 

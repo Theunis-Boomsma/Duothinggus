@@ -74,7 +74,7 @@ span.psw {
 
   <div class="container">
     <label for="email"><b style="color:rgb(255, 255, 255)">Email</b></label>
-    <input type="text" placeholder="Enter Email" name="uname" required>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
     <label for="password"><b style="color:rgb(255, 255, 255)">Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
