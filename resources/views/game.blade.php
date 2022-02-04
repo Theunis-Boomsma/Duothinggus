@@ -22,6 +22,14 @@
         padding: 0 !important;
         margin: 0 !important;
     }
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
 </style>
 <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
 <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
@@ -41,7 +49,7 @@
                 </ul>
                 <div class="row mt-2 mx-auto bg-red p-1 border-top border-dark">
 <div class="col-fluid">
-    <button type="button" class="btn btn-dark btn-lg rounded-0 " href="#">Back</button>
+    <button type="button" class="cancelbtn btn btn-dark btn-lg rounded-0 " href="#">Back</button>
 </div>
                 </div>
             </div>
